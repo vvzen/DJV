@@ -19,6 +19,7 @@ fi
 cd DJV-Debug
 cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$DJV_BUILD/DJV-install-Debug -DCMAKE_PREFIX_PATH=$DJV_BUILD/DJV-install-Debug -DCMAKE_FIND_FRAMEWORK="LAST"
 cmake --build . -j 8
+cmake --build . -j 8 --target install
 
 # Run tests
 cmake --build . -j 8 --target test
